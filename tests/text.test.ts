@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { fromText, evidenceFor, translationIssues, makeSamples, paperMarkdown } from '../src/text.ts';
+test('长无空格文本不丢前缀或后缀', () => { const input = '前' + '文'.repeat(9500) + '尾'; const p = fromText('长文', input); assert.equal(p.blocks.map(b => b.text).join(''), input); assert.ok(p.blocks.every(b => b.text.length <= 4000)); });
+test('英文长段分割保留所有词', () => { const input = Array.from({ length: 1500 }, (_, i) => `token${i}`).join(' '); const p = fromText('Long', input); assert.equal(p.blocks.map(b => b.text).join(' '), input); });
+test('分割不破坏Unicode代理对', () => { const input = 'a'.repeat(3999) + String.fromCodePoint(0x1F331) + 'b'.repeat(4100); const p = fromText('Unicode', input); assert.equal(p.blocks.map(b => b.text).join(''), input); assert.ok(p.blocks.every(b => b.text.isWellFormed())); });
+test('无正文拒绝导入，章节不是正文', () => { assert.throws(() => fromText('x', '# Methods')); assert.throws(() => fromText('x', '  ')); });
+test('教学样例均标记，译文不预置，证据引用真实段落', () => { for (const p of makeSamples()) { assert.equal(p.sample, true); assert.deepEqual(p.translations, {}); for (const e of evidenceFor(p)) assert.equal(p.blocks.find(b => b.id === e.blockId)?.text, e.text); assert.deepEqual(evidenceFor(p, 'zxqnonexistentword'), []); } });
+test('术语、数值、否定和条件保留核对提示', () => { const flags = translationIssues('It may not improve 32 patients with attention.', '可能改善患者。', [{id:'t',source:'attention',target:'注意力'}]); assert.equal(flags.length, 4); });
+test('导出原文与已存笔记，不凭空制造译文', () => { const p = makeSamples()[0]; p.notes.push({ id:'n', text:'真实笔记', createdAt:1 }); const out = paperMarkdown(p); assert.ok(out.includes(p.blocks[0].text)); assert.ok(out.includes('真实笔记')); assert.ok(!out.includes('**译文')); });

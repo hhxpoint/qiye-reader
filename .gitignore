@@ -1,0 +1,13 @@
+node_modules/
+dist/
+model-assets/
+submission/
+tests/artifacts/
+*.qoder.site
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+.vite/

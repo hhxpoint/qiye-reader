@@ -1,0 +1,34 @@
+栖页 QIYE — Open-source and content notices
+
+TRANSLATION MODEL
+Model: onnx-community/opus-mt-en-zh (ONNX quantized conversion)
+Source: https://huggingface.co/onnx-community/opus-mt-en-zh
+Pinned revision: 4dc37afc6deb160f4c9048260d48019ee497658e
+Original model: Helsinki-NLP/opus-mt-en-zh, University of Helsinki / OPUS-MT project
+https://huggingface.co/Helsinki-NLP/opus-mt-en-zh
+Model card license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/legalcode
+Quantized ONNX weights and tokenizer are redistributed unchanged from the pinned conversion. No endorsement is implied. Translation outputs require human verification; no accuracy guarantee is provided.
+
+RUNTIME SOFTWARE
+Transformers.js 4.3.2 — Hugging Face, Apache License 2.0. See /transformers-LICENSE.txt
+ONNX Runtime Web — Microsoft, MIT License. See /runtime/LICENSE.txt and /runtime/ThirdPartyNotices.txt. Official notices: https://github.com/microsoft/onnxruntime/blob/main/LICENSE and https://github.com/microsoft/onnxruntime/blob/main/ThirdPartyNotices.txt
+PDF.js 6.5.438 — Mozilla Foundation, Apache License 2.0. See /pdf-runtime/LICENSE.txt
+React — Meta, MIT License. See /react-LICENSE.txt
+Lucide — ISC License. See /lucide-LICENSE.txt
+Other bundled package licenses are retained in the original project's node_modules packages.
+
+DOCUMENT EXPORT
+pdf-lib 1.17.1 — MIT License. See /pdf-lib-LICENSE.txt
+@pdf-lib/fontkit 1.1.1 — MIT-licensed fork of fontkit (Devon Govett and Hopding contributors).
+docx 9.16.0 — MIT License. See /docx-LICENSE.txt
+Qiye Sans Regular — static weight-400 instance derived from Noto Sans SC, renamed Qiye Sans; SIL Open Font License 1.1. See /fonts/OFL.txt
+Font upstream: https://github.com/google/fonts/tree/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc
+Font source Git blob: fb0637bafbcd804fe32152370a1225990745b4bc
+PDF export embeds the full local font and preserves selected source PDF pages as an appendix. Word export retains editable text and rasterized full-page source images. Neither creates new research charts or translates text inside source figures.
+
+CONTENT AND PRIVACY
+The three starter texts are original QIYE teaching examples, not published papers or measured experiments. There are no prewritten translation outputs.
+User documents and reading notes are processed and stored in the browser. Application and runtime assets are fetched from this website. Fixed-revision public ONNX weights are fetched from hf-mirror.com, with Hugging Face as an alternate source. Neither receives document text. Download availability depends on these external services. Optional built-in browser AI downloads are managed by the browser vendor. No cloud language-model endpoint is used.
+Local storage may be deleted or evicted. Use the complete backup feature. This first version has no OCR, automatic cloud synchronization, or guarantee of support for every language, device or PDF layout.

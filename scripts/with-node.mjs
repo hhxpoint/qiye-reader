@@ -1,0 +1,10 @@
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+const major = Number(process.versions.node.split('.')[0]);
+const minor = Number(process.versions.node.split('.')[1]);
+const compatible = major >= 24 || (major === 22 && minor >= 13);
+const executable = compatible ? process.execPath : fileURLToPath(new URL('../node_modules/node/bin/node.exe', import.meta.url));
+const child = spawn(executable, process.argv.slice(2), { stdio: 'inherit', env: process.env });
+child.on('error', error => { console.error('无法启动项目要求的 Node 24 运行时。请先 npm install。', error.message); process.exitCode = 1; });
+child.on('exit', code => { process.exitCode = code ?? 1; });
+for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => child.kill(signal));

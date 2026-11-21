@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>栖页本地模型验收（开发测试）</title><body><h1>真实模型验收</h1><p>仅使用公开的原创测试句子，不上传文献。</p><button id="run">运行真实英中翻译</button><button id="cancel">终止</button><pre id="result">等待开始</pre><script type="module">
+let worker;
+let started=0;
+const result=document.querySelector('#result');
+const history=document.createElement('pre'); history.id='history'; document.body.append(history);
+const record=(data)=>{ const entry={seconds:Math.round((performance.now()-started)/10)/100,...data}; result.textContent=JSON.stringify(entry,null,2); history.textContent+=JSON.stringify(entry)+'\n'; };
+document.querySelector('#run').onclick=()=>{
+  worker?.terminate();
+  worker=new Worker(new URL('../src/engine.worker.ts',import.meta.url),{type:'module'});
+  started=performance.now(); history.textContent=''; record({message:'正在开始'});
+  worker.onmessage=event=>record(event.data);
+  worker.onerror=event=>record({error:event.message});
+  worker.postMessage({id:1,type:'translate',text:'Reading a research paper requires careful attention to the evidence. The result does not prove that the treatment is effective for everyone.'});
+};
+document.querySelector('#cancel').onclick=()=>{worker?.terminate();result.textContent='已终止';};
+</script></body></html>
