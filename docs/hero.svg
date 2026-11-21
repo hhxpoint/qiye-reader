@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">栖页 QIYE，浏览器本地文献阅读工作台</title>
+  <desc id="desc">暖纸色背景上的栖页标识、标题、说明与几何书本插画。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f5"/>
+      <stop offset="1" stop-color="#f1f1e8"/>
+    </linearGradient>
+    <linearGradient id="sage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dce6d0"/>
+      <stop offset="1" stop-color="#c5d4b7"/>
+    </linearGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1e3d8"/>
+      <stop offset="1" stop-color="#e4cdbd"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="560" fill="url(#paper)"/>
+  <rect x="24" y="24" width="1552" height="512" rx="28" fill="none" stroke="#e1e3d8"/>
+  <circle cx="1420" cy="120" r="140" fill="#e7ecdf" opacity=".55" filter="url(#soft)"/>
+  <circle cx="1090" cy="470" r="120" fill="#f0e5da" opacity=".42" filter="url(#soft)"/>
+
+  <g fill="#7c8b6e" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" letter-spacing="4">
+    <text x="80" y="82">QIYE / A QUIET LIBRARY</text>
+    <text x="80" y="110" fill="#a3ab98" font-size="10" letter-spacing="2.4">LOCAL-FIRST READING WORKSPACE</text>
+  </g>
+
+  <g font-family="Georgia,'Noto Serif CJK SC','Songti SC',serif" fill="#344033">
+    <text x="78" y="248" font-size="126" letter-spacing="10">栖页</text>
+    <text x="82" y="292" font-size="25" letter-spacing="7.5" fill="#506d51">Q I Y E</text>
+  </g>
+
+  <text x="80" y="350" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="27" fill="#4d5a48">把文献阅读，留在自己的设备里。</text>
+  <text x="80" y="390" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" fill="#7e8874">本地翻译 · 原文回查 · 阅读笔记 · PDF / Word 导出</text>
+
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" letter-spacing="1.4">
+    <g transform="translate(80 432)">
+      <rect width="132" height="36" rx="18" fill="#eef2e6" stroke="#d7e0cc"/>
+      <text x="66" y="23" text-anchor="middle" fill="#5d7454">LOCAL-FIRST</text>
+    </g>
+    <g transform="translate(224 432)">
+      <rect width="166" height="36" rx="18" fill="#f4eee6" stroke="#e5d9ca"/>
+      <text x="83" y="23" text-anchor="middle" fill="#8a6f59">OPUS-MT / WASM</text>
+    </g>
+    <g transform="translate(402 432)">
+      <rect width="176" height="36" rx="18" fill="#efedf2" stroke="#dfdbe7"/>
+      <text x="88" y="23" text-anchor="middle" fill="#786f8a">PDF · WORD · MD</text>
+    </g>
+  </g>
+
+  <g transform="translate(1040 78)">
+    <ellipse cx="210" cy="205" rx="238" ry="154" fill="none" stroke="#cfd8c4" stroke-dasharray="3 9" transform="rotate(-12 210 205)"/>
+    <circle cx="402" cy="92" r="54" fill="#eeecf2" stroke="#e1dce8"/>
+    <circle cx="402" cy="92" r="28" fill="none" stroke="#b4a9c3" stroke-dasharray="2 5"/>
+    <path d="M385 92 h34 M402 75 v34" stroke="#b4a9c3" stroke-width="1.2"/>
+
+    <g transform="rotate(8 260 270)">
+      <rect x="170" y="135" width="220" height="300" rx="10" fill="url(#clay)" stroke="#d9c1ae"/>
+      <path d="M210 135 v300" stroke="#d1b49e" opacity=".7"/>
+      <path d="M242 196 h116 M242 222 h94 M242 248 h108" stroke="#c9a98f" stroke-width="2" opacity=".5"/>
+      <path d="M242 330 c26-28 48-28 70-6 c20-24 42-24 64 2" fill="none" stroke="#b58f74" stroke-width="1.5" opacity=".7"/>
+    </g>
+
+    <g transform="rotate(-7 260 270)">
+      <rect x="120" y="152" width="226" height="312" rx="12" fill="url(#sage)" stroke="#aebfa2"/>
+      <rect x="132" y="164" width="202" height="288" rx="7" fill="#fbfaf4" opacity=".45"/>
+      <path d="M228 152 v312" stroke="#9db08e" opacity=".7"/>
+      <path d="M160 214 h130 M160 242 h102 M160 270 h120 M160 298 h86" stroke="#779168" stroke-width="2" opacity=".45"/>
+      <path d="M272 346 c-22-48 2-82 52-90 c2 48-18 80-52 90 Z" fill="#eff3e8" stroke="#728867" stroke-width="1.5"/>
+      <path d="M276 346 c2-30 14-54 44-84" fill="none" stroke="#728867" stroke-width="1.2"/>
+      <text x="158" y="388" font-family="Georgia,serif" font-size="18" fill="#56704e" letter-spacing="1">one page</text>
+      <text x="158" y="410" font-family="Georgia,serif" font-size="18" fill="#56704e" letter-spacing="1">at a time.</text>
+    </g>
+
+    <g transform="translate(374 300) rotate(6)">
+      <rect width="150" height="104" rx="8" fill="#fffef9" stroke="#dedfd3"/>
+      <rect x="16" y="18" width="46" height="6" rx="3" fill="#c7d3bb"/>
+      <path d="M16 40 h118 M16 56 h92 M16 72 h108" stroke="#dfe3d7" stroke-width="2"/>
+      <circle cx="126" cy="84" r="7" fill="#506d51" opacity=".75"/>
+    </g>
+
+    <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="10" letter-spacing="2" fill="#97a08e">
+      <text x="20" y="490">TAKE YOUR TIME.</text>
+      <text x="336" y="490">LOCAL / PRIVATE</text>
+    </g>
+  </g>
+
+  <line x1="80" y1="500" x2="1520" y2="500" stroke="#e2e5da"/>
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" letter-spacing="2" fill="#969e8d">
+    <text x="80" y="528">2026 QODER STUDYHACK</text>
+    <text x="1520" y="528" text-anchor="end">OPEN SOURCE / V0.1</text>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">栖页本地优先架构</title>
+  <desc id="desc">浏览器内的 React 界面、PDF 阅读器、翻译 Worker、本地存储和导出模块；仅模型权重来自公开模型源，文档正文不离开设备。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#87967d"/>
+    </marker>
+    <marker id="arrowSage" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#506d51"/>
+    </marker>
+    <marker id="arrowClay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a27f68"/>
+    </marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#3f4a37" flood-opacity=".06"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f8f7f2"/>
+  <g font-family="Georgia,'Noto Serif CJK SC','Songti SC',serif" fill="#344033">
+    <text x="80" y="72" font-size="31" letter-spacing="1">本地优先架构</text>
+    <text x="80" y="102" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="14" fill="#8a9581" letter-spacing="2.2">LOCAL-FIRST ARCHITECTURE / 数据流与隐私边界</text>
+  </g>
+
+  <rect x="60" y="140" width="1180" height="660" rx="26" fill="#fbfaf5" stroke="#d8ddd0" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="92" y="176" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="14" fill="#7c8972" letter-spacing="2.6">BROWSER / 浏览器边界</text>
+  <path d="M92 188 h1100" stroke="#e5e7dd"/>
+
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+    <g transform="translate(100 210)" filter="url(#shadow)">
+      <rect width="300" height="150" rx="14" fill="#eef2e6" stroke="#d4dfc8"/>
+      <rect width="5" height="150" rx="2.5" fill="#7e9570"/>
+      <text x="26" y="42" font-size="24" fill="#3f523b">React UI</text>
+      <text x="26" y="70" font-size="16" fill="#66745d">阅读工作台 · 设置 · 导出</text>
+      <text x="26" y="98" font-size="13" fill="#83917a">React 19 / TypeScript / Vite</text>
+      <text x="26" y="124" font-size="13" fill="#83917a">响应式布局 · 减少动态</text>
+    </g>
+
+    <g transform="translate(100 400)" filter="url(#shadow)">
+      <rect width="300" height="150" rx="14" fill="#f2eee4" stroke="#e2d8c6"/>
+      <rect width="5" height="150" rx="2.5" fill="#b29a77"/>
+      <text x="26" y="42" font-size="24" fill="#574b3b">PDF Reader</text>
+      <text x="26" y="70" font-size="16" fill="#776b5b">pdfjs-dist · 页面渲染 · 文本块</text>
+      <text x="26" y="98" font-size="13" fill="#958a7b">坐标启发式 · 双栏提示</text>
+      <text x="26" y="124" font-size="13" fill="#958a7b">原文页码与段落回链</text>
+    </g>
+
+    <g transform="translate(450 210)" filter="url(#shadow)">
+      <rect width="330" height="340" rx="14" fill="#f4f1e8" stroke="#dddccf"/>
+      <rect width="5" height="340" rx="2.5" fill="#506d51"/>
+      <text x="26" y="42" font-size="24" fill="#3f523b">阅读助手 / Companion</text>
+      <text x="26" y="70" font-size="16" fill="#6f7966">译文 · 证据提要 · 笔记 · 校订</text>
+      <g font-size="14" fill="#56634d">
+        <rect x="26" y="96" width="278" height="44" rx="8" fill="#e8eee0"/>
+        <text x="42" y="124">翻译 / 人工校订优先</text>
+        <rect x="26" y="152" width="278" height="44" rx="8" fill="#f1ece2"/>
+        <text x="42" y="180">提要 / 原文页码与回查</text>
+        <rect x="26" y="208" width="278" height="44" rx="8" fill="#eeeaf1"/>
+        <text x="42" y="236">笔记 / 关联段落与草稿</text>
+      </g>
+      <text x="26" y="286" font-size="13" fill="#8a9480">人工校订不会被自动重译覆盖</text>
+      <text x="26" y="310" font-size="13" fill="#8a9480">不支持的内容明确提示</text>
+    </g>
+
+    <g transform="translate(830 210)" filter="url(#shadow)">
+      <rect width="340" height="200" rx="14" fill="#e8efdf" stroke="#cbdcbd"/>
+      <rect width="5" height="200" rx="2.5" fill="#5f7f53"/>
+      <text x="26" y="42" font-size="24" fill="#385036">Translation Worker</text>
+      <text x="26" y="70" font-size="16" fill="#5f7255">OPUS-MT q8 · ONNX Runtime WASM</text>
+      <text x="26" y="98" font-size="13" fill="#7b8b70">固定 revision · 单线程 WASM</text>
+      <text x="26" y="124" font-size="13" fill="#7b8b70">逐段翻译 · 可取消 · 结果即存</text>
+      <rect x="26" y="146" width="144" height="30" rx="15" fill="#f8fbf4" stroke="#c8d8bb"/>
+      <text x="98" y="166" text-anchor="middle" font-size="12" fill="#55704e">no cloud LLM</text>
+    </g>
+
+    <g transform="translate(100 610)" filter="url(#shadow)">
+      <rect width="300" height="150" rx="14" fill="#f3efe7" stroke="#ddd6c8"/>
+      <rect width="5" height="150" rx="2.5" fill="#b99d80"/>
+      <text x="26" y="42" font-size="24" fill="#554a3c">Local Storage</text>
+      <text x="26" y="70" font-size="16" fill="#756a5c">IndexedDB · sessionStorage</text>
+      <text x="26" y="98" font-size="13" fill="#948a7c">文献 · 译文 · 笔记 · 设置</text>
+      <text x="26" y="124" font-size="13" fill="#948a7c">草稿恢复 · 完整备份</text>
+    </g>
+
+    <g transform="translate(450 610)" filter="url(#shadow)">
+      <rect width="330" height="150" rx="14" fill="#efe9f1" stroke="#ddd4e4"/>
+      <rect width="5" height="150" rx="2.5" fill="#9584a6"/>
+      <text x="26" y="42" font-size="24" fill="#4b4053">Export</text>
+      <text x="26" y="70" font-size="16" fill="#6d6078">pdf-lib · docx · fontkit</text>
+      <text x="26" y="98" font-size="13" fill="#8d8097">PDF / Word / Markdown</text>
+      <text x="26" y="124" font-size="13" fill="#8d8097">原页附录 · 页码 · 来源</text>
+    </g>
+
+    <g transform="translate(830 450)" filter="url(#shadow)">
+      <rect width="340" height="310" rx="14" fill="#f7f4eb" stroke="#e2ddcd"/>
+      <rect width="5" height="310" rx="2.5" fill="#c3b079"/>
+      <text x="26" y="42" font-size="23" fill="#544b38">Same-origin assets</text>
+      <text x="26" y="70" font-size="15" fill="#766d5b">tokenizer · ORT WASM · Qiye Sans</text>
+      <text x="26" y="98" font-size="13" fill="#948b79">PDF runtime · cmaps · fonts</text>
+      <g font-size="12" fill="#837a68">
+        <rect x="26" y="122" width="286" height="1" fill="#e7e1d3"/>
+        <text x="26" y="150">public/models · 分词器配置</text>
+        <text x="26" y="178">public/runtime · ONNX Runtime</text>
+        <text x="26" y="206">public/fonts · 导出中文字体</text>
+        <text x="26" y="234">public/pdf-runtime · PDF 资源</text>
+        <text x="26" y="262">许可文件随资源保留</text>
+      </g>
+      <text x="26" y="290" font-size="12" fill="#9a907c">同源静态资源，不接收文档</text>
+    </g>
+  </g>
+
+  <g stroke="#87967d" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M400 285 H446"/>
+    <path d="M400 475 H446"/>
+    <path d="M250 360 V396" marker-end="url(#arrowSage)"/>
+    <path d="M780 330 H826" marker-end="url(#arrowSage)"/>
+    <path d="M826 380 H784" marker-end="url(#arrowSage)"/>
+    <path d="M615 550 V580 H250 V606" marker-end="url(#arrowClay)"/>
+    <path d="M400 685 H446" marker-end="url(#arrowClay)"/>
+    <path d="M1000 446 V414" marker-end="url(#arrowSage)"/>
+    <path d="M830 560 H800 V700 H784" marker-end="url(#arrowClay)"/>
+  </g>
+
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="10" fill="#8a9581">
+    <text x="408" y="276">open</text>
+    <text x="794" y="322">req</text>
+    <text x="794" y="374">res</text>
+    <text x="404" y="676">export</text>
+    <text x="1014" y="430">assets</text>
+    <text x="1238" y="336" text-anchor="middle">weights</text>
+  </g>
+
+  <path d="M1272 190 V810" stroke="#b9c3b1" stroke-width="1.2" stroke-dasharray="5 8"/>
+  <g transform="translate(1286 210) rotate(90)" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#9aa392" letter-spacing="2.4">
+    <text x="0" y="0">PRIVACY BOUNDARY</text>
+  </g>
+
+  <g transform="translate(1300 260)" filter="url(#shadow)">
+    <rect width="240" height="180" rx="14" fill="#f2f4ee" stroke="#cbd6c3" stroke-dasharray="6 5"/>
+    <text x="22" y="38" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="21" fill="#3f523b">Public model source</text>
+    <text x="22" y="66" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#74806b">hf-mirror.com</text>
+    <text x="22" y="88" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#74806b">huggingface.co</text>
+    <text x="22" y="118" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#8c9783">fixed revision</text>
+    <text x="22" y="140" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#8c9783">weights only</text>
+  </g>
+  <path d="M1300 350 H1174" stroke="#9aab90" stroke-width="1.4" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowSage)"/>
+
+  <line x1="80" y1="850" x2="1520" y2="850" stroke="#dfe3d7"/>
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#8a9480">
+    <text x="80" y="878">文档正文、译文与笔记不发送到远程模型。首次翻译只下载公开权重与运行资源。</text>
+    <text x="1520" y="878" text-anchor="end">QIYE / LOCAL-FIRST</text>
+  </g>
+</svg>

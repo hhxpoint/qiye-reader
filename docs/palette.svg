@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">栖页设计语言与色板</title>
+  <desc id="desc">暖纸色、鼠尾草绿、薄雾、黏土和淡紫五种设计色，以及编辑式排版与克制动效说明。</desc>
+  <rect width="1600" height="360" fill="#f8f7f2"/>
+  <rect x="24" y="24" width="1552" height="312" rx="24" fill="#fbfaf5" stroke="#e1e4d9"/>
+  <text x="64" y="78" font-family="Georgia,'Noto Serif CJK SC','Songti SC',serif" font-size="28" fill="#344033" letter-spacing="1">设计语言 / DESIGN LANGUAGE</text>
+  <text x="64" y="104" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#8c9682" letter-spacing="2.2">WARM PAPER · SAGE INK · QUIET MOTION · EDITORIAL TYPE</text>
+
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+    <g transform="translate(64 136)">
+      <rect width="270" height="116" rx="12" fill="#f9f8f4" stroke="#e4e3d9"/>
+      <circle cx="26" cy="26" r="9" fill="#f9f8f4" stroke="#d9dbcf"/>
+      <text x="44" y="32" font-size="17" fill="#4c5747">暖纸</text>
+      <text x="20" y="70" font-size="13" fill="#8c9485">Paper</text>
+      <text x="20" y="94" font-family="ui-monospace,monospace" font-size="13" fill="#596652">#F9F8F4</text>
+    </g>
+    <g transform="translate(354 136)">
+      <rect width="270" height="116" rx="12" fill="#506d51"/>
+      <circle cx="26" cy="26" r="9" fill="#dfe8d7" stroke="#ffffff55"/>
+      <text x="44" y="32" font-size="17" fill="#f8fbf5">鼠尾草</text>
+      <text x="20" y="70" font-size="13" fill="#d7e2cf">Sage ink</text>
+      <text x="20" y="94" font-family="ui-monospace,monospace" font-size="13" fill="#d7e2cf">#506D51</text>
+    </g>
+    <g transform="translate(644 136)">
+      <rect width="270" height="116" rx="12" fill="#e5eadb" stroke="#d4dcc8"/>
+      <circle cx="26" cy="26" r="9" fill="#ffffff" stroke="#c7d3bb"/>
+      <text x="44" y="32" font-size="17" fill="#4c5747">薄雾</text>
+      <text x="20" y="70" font-size="13" fill="#7d8873">Mist</text>
+      <text x="20" y="94" font-family="ui-monospace,monospace" font-size="13" fill="#596652">#E5EADB</text>
+    </g>
+    <g transform="translate(934 136)">
+      <rect width="270" height="116" rx="12" fill="#b9947e"/>
+      <circle cx="26" cy="26" r="9" fill="#f7e9df" stroke="#ffffff55"/>
+      <text x="44" y="32" font-size="17" fill="#fffaf5">黏土</text>
+      <text x="20" y="70" font-size="13" fill="#f9e7dc">Clay</text>
+      <text x="20" y="94" font-family="ui-monospace,monospace" font-size="13" fill="#f9e7dc">#B9947E</text>
+    </g>
+    <g transform="translate(1224 136)">
+      <rect width="270" height="116" rx="12" fill="#a097b6"/>
+      <circle cx="26" cy="26" r="9" fill="#f0ecf5" stroke="#ffffff55"/>
+      <text x="44" y="32" font-size="17" fill="#fffafd">淡紫</text>
+      <text x="20" y="70" font-size="13" fill="#f1ecf6">Lavender</text>
+      <text x="20" y="94" font-family="ui-monospace,monospace" font-size="13" fill="#f1ecf6">#A097B6</text>
+    </g>
+  </g>
+
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" fill="#7f8a76">
+    <text x="64" y="292" font-size="13">标题以衬线建立编辑感，正文保持清晰的白话节奏；圆角、阴影与动效都克制，阅读本身留在前景。</text>
+    <text x="64" y="316" font-size="11" fill="#9aa391" letter-spacing="1.6">SERIF HEADLINES · READABLE BODY · REDUCED-MOTION SUPPORT · GENEROUS SPACE</text>
+  </g>
+</svg>
