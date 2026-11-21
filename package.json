@@ -1,7 +1,26 @@
 {
-  "name": "qoder-site-react-starter",
+  "name": "qiye-reader",
   "version": "0.1.0",
   "private": true,
+  "description": "Local-first literature reading workspace with browser translation and source-page-preserving PDF/Word export.",
+  "license": "MIT",
+  "homepage": "https://qiye-library-q5ridqj4azi.qoder.website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hhxpoint/qiye-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hhxpoint/qiye-reader/issues"
+  },
+  "keywords": [
+    "literature-review",
+    "pdf",
+    "translation",
+    "local-first",
+    "react",
+    "typescript",
+    "qoder"
+  ],
   "engines": {
     "node": "^22.13.0 || >=24.0.0"
   },
